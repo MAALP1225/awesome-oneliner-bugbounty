@@ -117,6 +117,12 @@ one | uniq); done
 ```bash
 curl -s "https://rapiddns.io/subdomain/$1?full=1#result" | grep "<td><a" | cut -d '"' -f 2 | grep http | cut -d '/' -f3 | sed 's/#results//g' | sort -u
 ```
+### Get Subdomains from Hackertarget
+> @MAALP1225
+
+```bash
+curl -s "https://api.hackertarget.com/hostsearch/?q=Domain.com" | cut -d ',' -f1 
+```
 
 ### Get Subdomains from BufferOver.run
 > @\_ayoubfathi\_
